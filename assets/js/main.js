@@ -1,159 +1,201 @@
-console.log('Sample JavaScript HW#1');
+// console.log('Sample JavaScript HW#1');
 
-/*
- * #1
- *
- * Создайте переменные со значениями
- */
 
-// имя переменной: myNum, значение: 10
-var myNum;
-myNum = 10;
-console.log(myNum);
+// myNum = 10;
+// console.log(myNum);
 
 
 
-// имя переменной: myStr, значение: 'строка'
-var myStr;
-myStr = 'строка';
-console.log(myStr);
 
-
-// имя переменной: myBool, значение: true
-var myBool;
-myBool = true;
-console.log(myBool);
-
-// имя переменной: myArr, значения: 1, 2, 3, 4, 5
-var myArr;
-myArr = [1, 2, 3, 4, 5];
-console.log(myArr);
-// имя переменной myObj, значения: first: 'First Name', last: 'Last Name'
-var myObj;
-myObj = {first: 'First Name', last: 'Last Name'}
-console.log(myObj);
-
-/*
- * #2
- *
- * Отформатируйте целое число, которое хранится в переменной myNum,
- * чтобы получить результат с 2 знаками после запятой.
- * Результат сохраните в переменную decimal2.
- */
-
-// decimal2
-var decimal2;
-decimal2 = myNum.toFixed(2);
-console.log(decimal2);
+// var myStr;
+// myStr = 'строка';
+// console.log(myStr);
 
 
 
-/*
- * #3
- *
- * Создайте переменную i для которой выполните префиксный
- * и постфиксный инкремент и декремент.
- * Поэкспериментируйте с результатами, выводя их в консоль.
- */
-
-// i
-var i = 0;
-console.log(i);
-console.log(++i);
-console.log(i++);
-console.log(i--);
-console.log(--i);
+// var myBool;
+// myBool = true;
+// console.log(myBool);
 
 
-/*
- * #4
- *
- * Создайте новую переменную myTest и присвойте ей значение 20.
- * Выполните присваивание с операцией, используя операторы: +=, –=, *=, /=, %=.
- * Результаты присваиваются в myTest, затем выводятся в консоль.
- * В вычислениях можно использовать объявленную ранее переменную myNum и/или числа.
- */
+// var myArr;
+// myArr = [1, 2, 3, 4, 5];
+// console.log(myArr);
 
-var myTest = 20;
-console.log(myTest);
-
-myTest += myNum;
-console.log(myTest);
-
-myTest -= myNum;
-console.log(myTest);
-
-myTest *= 10;
-console.log(myTest);
-
-myTest /= 5;
-console.log(myTest);
-
-myTest %= 3;
-console.log(myTest);
-
-/*
- * #5
- *
- * Используя свойства и методы объекта Math, присвойте переменным и отобразите в консоли
- */
-
-var myPi = Math.PI;
-console.log(myPi);
-
-var myRound = Math.round(89.279);
-console.log(myRound);
-
-var myRandom = Math.random() * 10; 
-console.log(myRandom);
-
-var myPow = Math.pow(3, 5);
-console.log(myPow);
+// var myObj;
+// myObj = {first: 'First Name', last: 'Last Name'}
+// console.log(myObj);
 
 
-/*
- * #6
- *
- * Создайте объект с именем strObj.
- * Присвойте ключу str строку текста "Мама мыла раму, рама мыла маму", ключу length установите длину этой строки.
- */
-
-// Мама мыла раму, рама мыла маму
-
-var strObj = {str: 'Мама мыла раму, рама мыла маму'};
-
-strObj.length = strObj.str.length;
-console.log('strObj = ', strObj);
+// var decimal2;
+// decimal2 = myNum.toFixed(2);
+// console.log(decimal2);
 
 
 
-/*
- * #7
- *
- * Проверьте наличие текста 'рама' в поле str объекта strObj (см.п.6),
- * результат сохраните в переменную isRamaPos и выведите ее в консоль.
- */
-var isRamaPos = strObj.str.indexOf( 'рама');
-console.log(isRamaPos);
+
+// var i = 0;
+// console.log(i);
+// console.log(++i);
+// console.log(i++);
+// console.log(i--);
+// console.log(--i);
+
+
+
+
+// var myTest = 20;
+// console.log(myTest);
+
+// myTest += myNum;
+// console.log(myTest);
+
+// myTest -= myNum;
+// console.log(myTest);
+
+// myTest *= 10;
+// console.log(myTest);
+
+// myTest /= 5;
+// console.log(myTest);
+
+// myTest %= 3;
+// console.log(myTest);
+
+
+// var myPi = Math.PI;
+// console.log(myPi);
+
+// var myRound = Math.round(89.279);
+// console.log(myRound);
+
+// var myRandom = Math.random() * 10; 
+// console.log(myRandom);
+
+// var myPow = Math.pow(3, 5);
+// console.log(myPow);
+
+
+
+
+// var strObj = {str: 'Мама мыла раму, рама мыла маму'};
+
+// strObj.length = strObj.str.length;
+// console.log('strObj = ', strObj);
+
+
+
+
+// var isRamaPos = strObj.str.indexOf( 'рама');
+// console.log(isRamaPos);
  
 
-// isRamaPos
 
-/*
- * #8
- *
- * Выполните переименование подстроки в строке.
- * В качестве исходной строки используйте значение поля str объекта strObj (см.п.6), результат сохраните в переменную strReplace и отобразите в консоли.
- * Исходная строка: 'Мама мыла раму, рама мыла маму'
- *       Результат: 'Мама моет раму, Рама держит маму'
- */
-var strReplace = strObj.str.replace('Мама мыла раму, рама мыла маму', 'Мама моет раму, Рама держит маму');
-console.log(strReplace);
+// var strReplace = strObj.str.replace('Мама мыла раму, рама мыла маму', 'Мама моет раму, Рама держит маму');
+// console.log(strReplace);
 
-/*
- * #9
- *
- * Преобразуйте любую строку в верхний, затем в нижний регистры, результат отобразите в консоли.
- */
-console.log(strReplace.toUpperCase());
-console.log('hello world!'.toLowerCase());
+
+// console.log(strReplace.toUpperCase());
+// console.log('hello world!'.toLowerCase());
+
+
+// ----------------------------------------------------------------------------------------------
+
+
+var userObj = {
+  firstName: 'John',
+  lastName: 'Smith',
+  age: 40,
+  fullName() {
+      return `${userObj.firstName} ${userObj.lastName}`;
+    }
+};
+
+console.log(userObj);
+console.log(userObj.fullName());
+
+function defUpperStr(str) {
+return (str || 'Default text').toUpperCase();
+}
+
+console.log(defUpperStr('My text')); 
+console.log(defUpperStr()); 
+
+function evenFn(n) {
+var arr = [];
+
+for (var i = 1; i <= n; i++) if (i % 2 === 0) arr.push(i);
+
+return arr;
+}
+
+console.log(evenFn(10)); // [2, 4, 6, 8, 10]
+
+
+function weekFn(n) {
+  var str = '';
+
+  switch (n) {
+    case 1:
+      str = 'Понедельник';
+      break;
+    case 2:
+      str = 'Вторник';
+      break;
+    case 3:
+      str = 'Среда';
+      break;
+    case 4:
+      str = 'Четверг';
+      break;
+    case 5:
+      str = 'Пятница';
+      break;
+    case 6:
+      str = 'Суббота';
+      break;
+    case 7:
+      str = 'Воскресенье';
+      break;
+    default:
+      str = null;
+  }
+
+  return str;
+}
+
+function ageClassification(num) {
+  return num > 0
+    ? num > 24
+      ? num > 44
+        ? num > 65
+          ? num > 75
+            ? num > 90
+              ? num > 122
+                ? null
+                : 'долгожители'
+              : 'старческий возраст'
+            : 'пожилой возраст'
+          : 'средний возраст'
+        : 'молодой возраст'
+      : 'детский возраст'
+    : null;
+}
+
+console.log('-1 :', ageClassification(-1)); 
+console.log('5 :', ageClassification(5)); 
+console.log('34 :', ageClassification(34)); 
+console.log('50 :', ageClassification(50)); 
+console.log('65.1 :', ageClassification(65.1)); 
+console.log('80 :', ageClassification(80));
+console.log('110 :', ageClassification(110)); 
+console.log('130 :', ageClassification(130)); 
+
+
+
+
+
+
+
+
+
