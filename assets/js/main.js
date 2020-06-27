@@ -189,7 +189,54 @@ console.log('50 :', ageClassification(50));
 console.log('65.1 :', ageClassification(65.1)); 
 console.log('80 :', ageClassification(80));
 console.log('110 :', ageClassification(110)); 
-console.log('130 :', ageClassification(130)); 
+console.log('130 :', ageClassification(130));
+
+function oddFn(n) {
+  let arr = [];
+  let i = 0;
+
+  while (i++ < n) if (i % 2 !== 0) arr.push(i);
+
+  return arr;
+}
+
+function mainFunc(a, b, cb) {
+  if (cb && typeof cb === 'function') return cb(a, b);
+
+  return false;
+}
+
+/*
+ * реализуйте следующие функции, которые будут осуществлять механизм callback в основной функции,
+ * возвращая ей результат собственного вычисления...
+ * для возведения в степень и получения произвольного значения можете воспользоваться методами объекта Math.
+ */
+
+// cbRandom(a, b) – вычисляет и возвращает произвольное целое число в диапазоне между a и b включительно.
+function cbRandom(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+// cbPow(a, b) – вычисляет и возвращает результат возведения числа a в степень b.
+function cbPow(num, pow) {
+  return Math.pow(num, pow);
+}
+// cbAdd(a, b) – вычисляет и возвращает сумму двух чисел a и b.
+function cbAdd(a, b) {
+  return a + b;
+}
+
+/*
+ * mainFunc() должна возвращать результат работы переданной ей возвратной функции, например:
+ * mainFunc(2, 5, cbRandom) → случайно от 2 до 5 включительно
+ * mainFunc(10, 30, cbRandom) → случайно 10..30 включительно
+ * mainFunc(2, 5, cbPow) → 32
+ * mainFunc(2, 5, cbAdd) → 7
+ * mainFunc(2, 5, 'not a func') → false
+ */
+console.log(mainFunc(2, 5, cbRandom)); // целые числа в диапазоне 2..5
+console.log(mainFunc(2, 5, cbPow)); // 32
+console.log(mainFunc(2, 5, cbAdd)); // 7
+console.log(mainFunc(2, 5, 'not a func')); // false
 
 
 
