@@ -490,7 +490,7 @@ console.log(getWeekDay('2019-01-30'));
 console.log(getWeekDay('2019-07-16')); 
 console.log(getWeekDay('2019-07-27')); 
 
-et getLocalDay = (d) => {
+let getLocalDay = (d) => {
   const date = new Date(d);
   let day = date.getDay();
 
